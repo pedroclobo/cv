@@ -1,0 +1,155 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeBullet}[1]{
+  \item\small{
+    #1
+  }
+}
+
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\begin{document}
+
+% Heading
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://github.com/pedroclobo}{\Large Pedro Lobo}} & Email : \href{mailto:pedrocerqueiralobo@gmail.com}{pedrocerqueiralobo@gmail.com}\\
+  \href{https://github.com/pedroclobo}{https://github.com/pedroclobo} \\
+\end{tabular*}
+
+\vspace{12pt}
+
+% Education
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Instituto Superior Técnico}{Lisbon, Portugal}
+      {Master in Computer Science and Engineering}{September 2023 -- July 2025 (expected)}
+    \resumeSubheading
+      {Instituto Superior Técnico}{Lisbon, Portugal}
+      {Undergraduate in Computer Science and Engineering}{September 2020 -- July 2023}
+      \resumeItemListStart
+        \resumeBullet{Awarded Academic Merit Diploma (2021/2022)}
+        \resumeBullet{Awarded Academic Merit Diploma (2020/2021)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\vspace{4pt}
+
+% Experience
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Instituto Superior Técnico}{Lisbon, Portugal}
+      {Invited Teaching Assistant}{September 2023 - July 2024}
+      \resumeItemListStart
+        \resumeItem{Invited Teaching Assistant - Foundations of Programming}
+          {Provide knowledge about fundamental concepts related to programming activity, namely, algorithm, procedural abstraction and data abstraction, programming as construction of abstractions, programming paradigms. After attending the course, students should master the concepts presented and be able to develop programs in a high level programming language, Python. It is the teacher assistant's job to lecture practical classes, help students with their assignments and projects, and to grade their work.}
+        \resumeItem{Invited Teaching Assistant - Software Engineering}
+          {This course aims to acquaint students with the engineering and management methods necessary for the cost-effective development and maintenance of high-quality complex software systems. In particular, this UC discusses the software development lifecycle, from requirements to program maintenance. Leverage the knowledge acquired in other disciplines in the broader context of the software development process. Motivate for software development as an engineering, which integrates the technological aspects of computing with the social and human factors. At the end of the semester, students should be capable of describing the principles, concepts and practices of software engineering and software life cycle, be acquainted with and be capable of applying the required tools and techniques to carry out and manage the various tasks in the development of high quality software and be capable of explaining the development methods and processes of different types of software systems.}
+        \resumeItem{Invited Teaching Assistant - Compilers}
+          {Introductory course in compiler design with emphasis on deterministic language analysis and code generation, as well as the development process and its tools. Specification of lexical, syntactic and semantic analysis, using specific tools, understand the principles used by those parsers, develop a compiler that parses a given language an produces executable code and apply these concepts and tools to other related problems requiring deterministic analysis.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\vspace{4pt}
+
+% Projects
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://github.com/pedroclobo/mml-compiler}{MML Compiler}}
+      {Compiler for a mini \href{https://en.wikipedia.org/wiki/ML_(programming_language)}{meta language}, written in C++. The \texttt{flex} and \texttt{bison} tools were used to implement the lexer and parser. The AST visitor design pattern was used to implement type checking and code generation. The language supports functionals and pointers.}
+    \resumeSubItem{\href{https://github.com/pedroclobo/dist-ledger}{Distributed Ledger}}
+      {Service that implements a distributed ledger, written in Java, upon which exchanges of a digital currency are supported. The service is provided by one or more servers, through remote procedure calls.}
+    \resumeSubItem{\href{https://github.com/pedroclobo/takuzu}{Takuzu Solver}}
+      {Takuzu solver written in Python which makes use of the constraint satisfaction nature of the game to prune the search space tree and solve a board of Takuzu in a short amount of time. A report comparing the time and memory performance of various search algorithms was also developed.}
+  \resumeSubHeadingListEnd
+
+\vspace{4pt}
+
+% Open Source Contributions
+\section{Open Source Contributions}
+ \resumeSubHeadingListStart
+  \resumeSubItem{\href{https://github.com/leic-pt/resumos-leic/pulls?q=author:pedroclobo}{Resumos LEIC}}
+    {An open source website, dedicated to the creation of class notes focused on the courses in the curriculum of the undergraduate in Computer Science and Engineering at Técnico Lisboa, improving the academic performance of students.}
+ \resumeSubHeadingListEnd
+
+\end{document}
