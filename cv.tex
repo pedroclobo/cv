@@ -1,155 +1,130 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
+\usepackage{geometry}
+\geometry{
+  inner=1in,
+  outer=1in,
+}
 \usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
+\usepackage{fontawesome5}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=[HTML]{0000EE},
+}
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\usepackage{fontspec}
+\usepackage{libertine}
+\setmonofont{Inconsolatazi4}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\usepackage{changepage}
 
-\urlstyle{same}
+\setlist[itemize]{
+  rightmargin=5pt,
+}
 
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
+% Remove page numbers
+\pagestyle{empty}
 
-% Sections formatting
+% Better formatting for sections
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\Large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeBullet}[1]{
-  \item\small{
-    #1
-  }
-}
-
-\newcommand{\resumeHeading}[4]{
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
+% Replace itemize bullets with circles
 \renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
 
 \begin{document}
 
 % Heading
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://github.com/pedroclobo}{\Large Pedro Lobo}} & Email : \href{mailto:pedrocerqueiralobo@gmail.com}{pedrocerqueiralobo@gmail.com}\\
-  \href{https://github.com/pedroclobo}{https://github.com/pedroclobo} \\
-\end{tabular*}
+\noindent
+\begin{minipage}{\textwidth}
+  \begin{adjustwidth}{-6pt}{0pt}
+    \begin{tabular*}{\dimexpr\textwidth+10pt\relax}{l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r}
+      \textbf{\raggedright\LARGE Pedro Lobo} &
+      \href{https://github.com/pedroclobo}{\faGithub} \hspace{6pt}
+      \href{https://www.linkedin.com/in/pedroclobo/}{\faLinkedin} \hspace{6pt}
+      \href{mailto:pedrocerqueiralobo@gmail.com}{\faEnvelope} &
+      \textbf{\Large Software Engineer}\\\\
+    \end{tabular*}
+  \end{adjustwidth}
+\end{minipage}
 
-\vspace{12pt}
-
-% Education
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Instituto Superior Técnico}{Lisbon, Portugal}
-      {Master in Computer Science and Engineering}{September 2023 -- July 2025 (expected)}
-    \resumeSubheading
-      {Instituto Superior Técnico}{Lisbon, Portugal}
-      {Undergraduate in Computer Science and Engineering}{September 2020 -- July 2023}
-      \resumeItemListStart
-        \resumeBullet{Awarded Academic Merit Diploma (2021/2022)}
-        \resumeBullet{Awarded Academic Merit Diploma (2020/2021)}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+  \begin{itemize}[leftmargin=*]
+    \vspace{-1pt}
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{Instituto Superior Técnico} & Lisbon, Portugal \\
+      \textit{\small Master in Computer Science and Engineering} & \textit{\small September 2023 -- November 2025} \\
+      \textit{\small Undergraduate in Computer Science and Engineering} & \textit{\small September 2020 -- July 2023} \\
+    \end{tabular*}\vspace{-5pt}
+      \begin{itemize}
+        \item\small{Academic Excellence Diploma (2022/2023)}
+        \item\small{Academic Merit Diploma      (2021/2022)}
+        \item\small{Academic Merit Diploma      (2020/2021)}
+      \end{itemize}
+  \end{itemize}
 
-\vspace{4pt}
-
-% Experience
 \section{Experience}
-  \resumeSubHeadingListStart
+  \begin{itemize}[leftmargin=*]
+    \vspace{-1pt}
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{Instituto Superior Técnico} & Lisbon, Portugal \\
+      \textit{\small Invited Teaching Assistant} & \textit{\small September 2023 - July 2024} \\
+    \end{tabular*}\vspace{-5pt}
+      \begin{itemize}
+        \item\small{
+          \textbf{Compilers:} {
+            Following my performance on this course, I was invited to teach practical classes to next year's students.
+            I taught practical classes, ranging from lexical analysis to code generation and optimization.
+            I have also held office hours to provide additional guidance and helped students with the final project.
+          \vspace{-2pt}}
+        }
+        \item\small{
+          \textbf{Foundations of Programming:}{
+            I have taught practical classes to first year students in the course of Computer Science and Engineering.
+            A teaching assistant is responsible for lecturing practical classes, grade their weekly work, offer project support, provide additional guidance through office hours and grade the two projects developed by the students throughout the semester.
+          \vspace{-2pt}}
+        }
+      \end{itemize}
+  \end{itemize}
 
-    \resumeSubheading
-      {Instituto Superior Técnico}{Lisbon, Portugal}
-      {Invited Teaching Assistant}{September 2023 - July 2024}
-      \resumeItemListStart
-        \resumeItem{Invited Teaching Assistant - Foundations of Programming}
-          {Provide knowledge about fundamental concepts related to programming activity, namely, algorithm, procedural abstraction and data abstraction, programming as construction of abstractions, programming paradigms. After attending the course, students should master the concepts presented and be able to develop programs in a high level programming language, Python. It is the teacher assistant's job to lecture practical classes, help students with their assignments and projects, and to grade their work.}
-        \resumeItem{Invited Teaching Assistant - Software Engineering}
-          {This course aims to acquaint students with the engineering and management methods necessary for the cost-effective development and maintenance of high-quality complex software systems. In particular, this UC discusses the software development lifecycle, from requirements to program maintenance. Leverage the knowledge acquired in other disciplines in the broader context of the software development process. Motivate for software development as an engineering, which integrates the technological aspects of computing with the social and human factors. At the end of the semester, students should be capable of describing the principles, concepts and practices of software engineering and software life cycle, be acquainted with and be capable of applying the required tools and techniques to carry out and manage the various tasks in the development of high quality software and be capable of explaining the development methods and processes of different types of software systems.}
-        \resumeItem{Invited Teaching Assistant - Compilers}
-          {Introductory course in compiler design with emphasis on deterministic language analysis and code generation, as well as the development process and its tools. Specification of lexical, syntactic and semantic analysis, using specific tools, understand the principles used by those parsers, develop a compiler that parses a given language an produces executable code and apply these concepts and tools to other related problems requiring deterministic analysis.}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-\vspace{4pt}
-
-% Projects
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://github.com/pedroclobo/mml-compiler}{MML Compiler}}
-      {Compiler for a mini \href{https://en.wikipedia.org/wiki/ML_(programming_language)}{meta language}, written in C++. The \texttt{flex} and \texttt{bison} tools were used to implement the lexer and parser. The AST visitor design pattern was used to implement type checking and code generation. The language supports functionals and pointers.}
-    \resumeSubItem{\href{https://github.com/pedroclobo/dist-ledger}{Distributed Ledger}}
-      {Service that implements a distributed ledger, written in Java, upon which exchanges of a digital currency are supported. The service is provided by one or more servers, through remote procedure calls.}
-    \resumeSubItem{\href{https://github.com/pedroclobo/takuzu}{Takuzu Solver}}
-      {Takuzu solver written in Python which makes use of the constraint satisfaction nature of the game to prune the search space tree and solve a board of Takuzu in a short amount of time. A report comparing the time and memory performance of various search algorithms was also developed.}
-  \resumeSubHeadingListEnd
-
-\vspace{4pt}
-
-% Open Source Contributions
 \section{Open Source Contributions}
- \resumeSubHeadingListStart
-  \resumeSubItem{\href{https://github.com/leic-pt/resumos-leic/pulls?q=author:pedroclobo}{Resumos LEIC}}
-    {An open source website, dedicated to the creation of class notes focused on the courses in the curriculum of the undergraduate in Computer Science and Engineering at Técnico Lisboa, improving the academic performance of students.}
- \resumeSubHeadingListEnd
+ \begin{itemize}[leftmargin=*]
+  \item\small{
+    \textbf{\href{https://github.com/llvm/llvm-project/pulls?q=author:pedroclobo}{LLVM Project:}}{
+      The LLVM Project is a widely used collection of modular and reusable compiler and toolchain technologies, powering the code generation of many programming languages such as C, C++, Rust and Swift.
+      I regularly contribute to LLVM, mainly helping with the \texttt{undef} to \texttt{poison} transition, \href{https://github.com/llvm/llvm-project/pulls?q=author:pedroclobo}{having merged around 30 PRs}.
+      These contributions have granted me \href{https://github.com/llvm/llvm-project/issues/129447}{commit access to the LLVM project}.
+    \vspace{-2pt}}
+  }\vspace{-4pt}
+  \item\small{
+    \textbf{\href{https://github.com/leic-pt/resumos-leic/pulls?q=author:pedroclobo}{Resumos LEIC:}}{
+      An open source website, dedicated to the creation of class notes focused on the courses in the curriculum of the undergraduate in Computer Science and Engineering at Técnico Lisboa, improving the academic performance of students.
+      I contributed class notes for the courses of Machine Learning, Systems Analysis and Modeling, Computer Organization and Elements of Discrete Mathematics.
+    \vspace{-2pt}}
+  }\vspace{-4pt}
+ \end{itemize}
+
+\section{Projects}
+  \begin{itemize}[leftmargin=*]
+    \item\small{
+      \textbf{\href{https://github.com/pedroclobo/monkey-interpreter}{Monkey Interpreter:}}{
+        Interpreter and REPL for a toy language, written in Rust, with a hand written lexer and parser for C-like syntax, featuring strings, arrays, hashmaps, first-class functions and higher-order predicates.
+        I use this project as a playground to test and implement new ideas and concepts.
+      \vspace{-2pt}}
+    }\vspace{-4pt}
+    \item\small{
+      \textbf{\href{https://github.com/pedroclobo/cs-6120}{CS 6120:}}{
+        Playground for the \href{https://www.cs.cornell.edu/courses/cs6120/2020fa/self-guided/}{CS 6120 Course on Advanced Compilers}.
+        I have implemented various optimizations for a simple intermediate representation called Bril, such as dead code elimination, constant folding and local value numbering.
+      \vspace{-2pt}}
+    }\vspace{-4pt}
+  \end{itemize}
 
 \end{document}
