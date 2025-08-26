@@ -5,10 +5,11 @@ It is available [here](https://github.com/pedroclobo/cv/releases/latest/download
 
 ## Compiling Locally
 
-To compile the pdf locally, `latexmk` and `lualatex` need to be installed.
+To compile the pdf locally, `typst` need to be installed.
 
 The pdf can then be compiled by running the following command:
 
 ```bash
-latexmk -lualatex -pvc cv.tex
+typst compile cv.typ
 ```
+
