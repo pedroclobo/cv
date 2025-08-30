@@ -42,10 +42,11 @@
 
 == Experience
 
-#work(
-  title: "Google Summer of Code 2025",
-  company: "LLVM Foundation",
-  dates: dates-helper(start-date: "Jun 2025", end-date: "Sept 2025"),
+#generic-two-by-two(
+  top-left: strong("Google Summer of Code 2025"),
+  top-right: dates-helper(start-date: "Jun 2025", end-date: "Sept 2025"),
+  bottom-left: "LLVM Foundation",
+  bottom-right: [#link("https://" + "github.com/pedroclobo/gsoc-2025")[github.com/pedroclobo/gsoc-2025]],
 )
 - Worked on introducing a new type to the LLVM IR, enabling raw memory copies.
 - Encoded the semantics of the new type in the #link("https://github.com/AliveToolkit/alive2")[Alive2] optimization verifier.
