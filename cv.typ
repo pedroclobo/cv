@@ -44,7 +44,7 @@
 
 #generic-two-by-two(
   top-left: strong("Google Summer of Code 2025"),
-  top-right: dates-helper(start-date: "Jun 2025", end-date: "Sept 2025"),
+  top-right: dates-helper(start-date: "Jun 2025", end-date: "Aug 2025"),
   bottom-left: "LLVM Foundation",
   bottom-right: [#link("https://" + "github.com/pedroclobo/gsoc-2025")[github.com/pedroclobo/gsoc-2025]],
 )
