@@ -22,11 +22,13 @@
 #edu(
   institution: "Instituto Superior Técnico",
   location: "Lisbon, Portugal",
-  dates: dates-helper(start-date: "Sept 2023", end-date: "Nov 2025 (Expected)"),
+  dates: dates-helper(start-date: "Sept 2023", end-date: "Nov 2025"),
   degree: "Master's in Computer Science and Engineering",
   consistent: true
 )
-- Thesis: _Supporting Raw Data Copies in the LLVM Intermediate Representation_
+- Final Grade: 18/20
+- Thesis: #link("https://web.ist.utl.pt/nuno.lopes/students/Pedro_Lobo_MSc.pdf")[_Supporting Raw Data Copies in the LLVM Intermediate Representation_]
+  - Thesis Defense Grade: 20/20
 - Academic Merit Diploma #link("https://www.linkedin.com/in/pedroclobo/overlay/1755953423652/single-media-viewer/?profileId=ACoAADbeL1YBy8Jp6uzno7NEy5viCsztI34aRmU")[(2023/2024)]
 
 #edu(
@@ -52,7 +54,7 @@
 - Encoded the semantics of the new type in the #link("https://github.com/AliveToolkit/alive2")[Alive2] optimization verifier.
 - Successfully fixed type punning related miscompilations and implemented new optimizations.
 - Benchmarked the implementation, achieving nearly the same performance as upstream LLVM.
-- Scheduled to present the implemented solution at the #link("https://llvm.swoogo.com/2025devmtg/session/3366583/byte-type-supporting-raw-data-copies-in-the-llvm-ir")[LLVM Developer's Meeting 2025].
+- Present the implemented solution at the #link("https://www.youtube.com/watch?v=eQF-hDmlLog&pp=ygUOYnl0ZSB0eXBlIGxsdm0%3D")[LLVM Developer's Meeting 2025].
 
 #work(
   title: "Invited Teaching Assistant",
@@ -77,16 +79,16 @@
   url: "github.com/llvm/llvm-project",
 )
 - Regular contributor.
-- #link("https://github.com/llvm/llvm-project/pulls?q=author:pedroclobo")[Merged around 40 PRs].
+- #link("https://github.com/llvm/llvm-project/pulls?q=author:pedroclobo")[Merged around 45 PRs].
 - Granted #link("https://github.com/llvm/llvm-project/issues/129447")[commit access].
 
 == Projects
 
 #project(
-  name: "Monkey Interpreter",
-  url: "github.com/pedroclobo/monkey-interpreter",
+  name: "C Compiler",
+  url: "github.com/pedroclobo/rcc",
 )
-- Interpreter and REPL for a toy language, written in Rust, with a handwritten lexer and parser for C-like syntax, featuring strings, arrays, hashmaps, first-class functions and higher-order predicates.
+- C compiler targeting the x86-64 architecture, implemented in Rust.
 
 #project(
   name: "CS 6120",
