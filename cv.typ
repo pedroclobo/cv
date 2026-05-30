@@ -44,6 +44,17 @@
 
 == Experience
 
+#work(
+  title: "Software Engineer",
+  location: "Lisbon, Portugal (Remote)",
+  company: link("https://furiosa.ai/")[FuriosaAI],
+  dates: dates-helper(start-date: "Jan 2026", end-date: "Present"),
+)
+- Implemented #link("https://developer.furiosa.ai/furiosa-opt/book/")[Virtual ISA] abstractions exposing direct hardware control without sacrificing programmability.
+- Developed high-level tensor abstractions for the kernel programming model.
+- Designed the integration layer that lets custom kernels run as native PyTorch extensions.
+- Built programming tools, specifications, and reference implementations for kernel development.
+
 #generic-two-by-two(
   top-left: strong("Google Summer of Code 2025"),
   top-right: dates-helper(start-date: "Jun 2025", end-date: "Aug 2025"),
@@ -82,19 +93,3 @@
 - #link("https://github.com/llvm/llvm-project/pulls?q=author:pedroclobo")[Merged around 50 PRs].
 - Currently upstreaming the #link("https://discourse.llvm.org/t/rfc-add-a-new-byte-type-to-llvm-ir/89522")[byte type], introduced in #link("https://web.ist.utl.pt/nuno.lopes/students/Pedro_Lobo_MSc.pdf")[my Master's thesis].
 - Granted #link("https://github.com/llvm/llvm-project/issues/129447")[commit access].
-
-== Projects
-
-#project(
-  name: "C Compiler",
-  url: "github.com/pedroclobo/rcc",
-)
-- C compiler targeting the x86-64 architecture, implemented in Rust.
-
-#project(
-  name: "CS 6120",
-  url: "github.com/pedroclobo/cs-6120",
-)
-- Playground for the #link("https://www.cs.cornell.edu/courses/cs6120/2020fa/self-guided/")[CS 6120 Course on Advanced Compilers].
-- Implemented optimizations for a simple intermediate representation, including dead code elimination, constant folding, local value numbering and loop optimizations.
-
