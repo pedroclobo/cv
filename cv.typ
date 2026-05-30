@@ -80,9 +80,17 @@
   - Covered topics ranging from lexical analysis to code generation and optimization.
   - Held office hours to provide extra support and assisted students with their final projects.
 - *Foundations of Programming*
-  - Taught practical classes.
-  - Graded students' weekly assignments and final projects.
+  - Taught practical classes and graded students' weekly assignments and final projects.
   - Provided project support, offering additional guidance through office hours.
+
+== Publications
+
+#generic-two-by-two(
+  top-left: link("https://web.ist.utl.pt/nuno.lopes/pubs/byte-type-pldi26.pdf")[*Towards Removing Undef Values from LLVM IR*],
+  top-right: "PLDI 2026",
+  bottom-left: emph[Pedro Lobo, John McIver, George Mitenkov, Juneyoung Lee, Kirshanthan Sundararajah, Nuno P. Lopes],
+)
+- Awarded a *Distinguished Paper Award*.
 
 == Open Source Contributions
 
@@ -90,7 +98,5 @@
   name: "LLVM Project",
   url: "github.com/llvm/llvm-project",
 )
-- Regular contributor.
 - #link("https://github.com/llvm/llvm-project/pulls?q=author:pedroclobo")[Merged around 50 PRs].
 - Currently upstreaming the #link("https://discourse.llvm.org/t/rfc-add-a-new-byte-type-to-llvm-ir/89522")[byte type], introduced in #link("https://web.ist.utl.pt/nuno.lopes/students/Pedro_Lobo_MSc.pdf")[my Master's thesis].
-- Granted #link("https://github.com/llvm/llvm-project/issues/129447")[commit access].
