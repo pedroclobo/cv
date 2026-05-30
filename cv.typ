@@ -1,47 +1,31 @@
 #import "@preview/basic-resume:0.2.8": *
+#import "@preview/scienceicons:0.1.0": github-icon, linkedin-icon
 
 #let name = "Pedro Lobo"
 #let email = "pedrocerqueiralobo@gmail.com"
 #let github = "github.com/pedroclobo"
 #let linkedin = "linkedin.com/in/pedroclobo"
+#let homepage = "pedroclobo.github.io"
 
 #show: resume.with(
   author: name,
+  location: "Lisbon, Portugal",
   email: email,
-  github: github,
-  linkedin: linkedin,
+  personal-site: homepage,
   accent-color: "#26428b",
-  font: "New Computer Modern",
+  font: "Libertinus Serif",
   paper: "us-letter",
   author-position: left,
   personal-info-position: left,
 )
 
-== Education
-
-#edu(
-  institution: "Instituto Superior Técnico",
-  location: "Lisbon, Portugal",
-  dates: dates-helper(start-date: "Sept 2023", end-date: "Nov 2025"),
-  degree: "Master's in Computer Science and Engineering",
-  consistent: true
-)
-- Final Grade: 18/20
-- Thesis: #link("https://web.ist.utl.pt/nuno.lopes/students/Pedro_Lobo_MSc.pdf")[_Supporting Raw Data Copies in the LLVM Intermediate Representation_]
-  - Thesis Defense Grade: 20/20
-- Academic Excellence Diploma (2024/2025)
-- Academic Merit Diploma #link("https://www.linkedin.com/in/pedroclobo/overlay/1755953423652/single-media-viewer/?profileId=ACoAADbeL1YBy8Jp6uzno7NEy5viCsztI34aRmU")[(2023/2024)]
-
-#edu(
-  institution: "Instituto Superior Técnico",
-  location: "Lisbon, Portugal",
-  dates: dates-helper(start-date: "Sept 2020", end-date: "July 2023"),
-  degree: "Bachelor's in Computer Science and Engineering",
-  consistent: true
-)
-- Final Grade: 17/20
-- Academic Excellence Diploma #link("https://www.linkedin.com/in/pedroclobo/overlay/education/736118992/multiple-media-viewer/?profileId=ACoAADbeL1YBy8Jp6uzno7NEy5viCsztI34aRmU&treasuryMediaId=1742336327872")[(2022/2023)]
-- Academic Merit Diploma #link("https://www.linkedin.com/in/pedroclobo/overlay/education/736118992/multiple-media-viewer/?profileId=ACoAADbeL1YBy8Jp6uzno7NEy5viCsztI34aRmU&treasuryMediaId=1742336327874")[(2020/2021)], #link("https://www.linkedin.com/in/pedroclobo/overlay/education/736118992/multiple-media-viewer/?profileId=ACoAADbeL1YBy8Jp6uzno7NEy5viCsztI34aRmU&treasuryMediaId=1742336327873")[(2021/2022)]
+// GitHub and LinkedIn icons in the top-right corner.
+#place(top + right, dy: 0.4em)[
+  #show link: it => it
+  #link("https://" + github)[#github-icon(color: rgb("#26428b"), height: 2em, baseline: 25%)]
+  #h(0.5em)
+  #link("https://" + linkedin)[#linkedin-icon(color: rgb("#26428b"), height: 2em, baseline: 25%)]
+]
 
 == Experience
 
@@ -83,15 +67,6 @@
   - Taught practical classes and graded students' weekly assignments and final projects.
   - Provided project support, offering additional guidance through office hours.
 
-== Publications
-
-#generic-two-by-two(
-  top-left: link("https://web.ist.utl.pt/nuno.lopes/pubs/byte-type-pldi26.pdf")[*Towards Removing Undef Values from LLVM IR*],
-  top-right: "PLDI 2026",
-  bottom-left: emph[Pedro Lobo, John McIver, George Mitenkov, Juneyoung Lee, Kirshanthan Sundararajah, Nuno P. Lopes],
-)
-- Awarded a *Distinguished Paper Award*.
-
 == Open Source Contributions
 
 #project(
@@ -100,3 +75,41 @@
 )
 - #link("https://github.com/llvm/llvm-project/pulls?q=author:pedroclobo")[Merged around 50 PRs].
 - Currently upstreaming the #link("https://discourse.llvm.org/t/rfc-add-a-new-byte-type-to-llvm-ir/89522")[byte type], introduced in #link("https://web.ist.utl.pt/nuno.lopes/students/Pedro_Lobo_MSc.pdf")[my Master's thesis].
+
+== Publications
+
+#generic-two-by-two(
+  top-left: link(
+    "https://web.ist.utl.pt/nuno.lopes/pubs/byte-type-pldi26.pdf",
+  )[*Towards Removing Undef Values from LLVM IR*],
+  top-right: "PLDI 2026",
+  bottom-left: emph[Pedro Lobo, John McIver, George Mitenkov, Juneyoung Lee, Kirshanthan Sundararajah, Nuno P. Lopes],
+)
+- Awarded a *Distinguished Paper Award*.
+
+== Education
+
+#edu(
+  institution: "Instituto Superior Técnico",
+  location: "Lisbon, Portugal",
+  dates: dates-helper(start-date: "Sept 2023", end-date: "Nov 2025"),
+  degree: "Master's in Computer Science and Engineering",
+  consistent: true,
+)
+- Final Grade: 18/20
+- Thesis: #link("https://web.ist.utl.pt/nuno.lopes/students/Pedro_Lobo_MSc.pdf")[_Supporting Raw Data Copies in the LLVM Intermediate Representation_]
+  - Thesis Defense Grade: 20/20
+  - Awarded the #link("https://dei.tecnico.ulisboa.pt/en/news/campus-community/dei-alumnus-wins-best-thesis-award")[Best Thesis Award] by APDC.
+- Academic Excellence Diploma (2024/2025)
+- Academic Merit Diploma #link("https://www.linkedin.com/in/pedroclobo/overlay/1755953423652/single-media-viewer/?profileId=ACoAADbeL1YBy8Jp6uzno7NEy5viCsztI34aRmU")[(2023/2024)]
+
+#edu(
+  institution: "Instituto Superior Técnico",
+  location: "Lisbon, Portugal",
+  dates: dates-helper(start-date: "Sept 2020", end-date: "July 2023"),
+  degree: "Bachelor's in Computer Science and Engineering",
+  consistent: true,
+)
+- Final Grade: 17/20
+- Academic Excellence Diploma #link("https://www.linkedin.com/in/pedroclobo/overlay/education/736118992/multiple-media-viewer/?profileId=ACoAADbeL1YBy8Jp6uzno7NEy5viCsztI34aRmU&treasuryMediaId=1742336327872")[(2022/2023)]
+- Academic Merit Diploma #link("https://www.linkedin.com/in/pedroclobo/overlay/education/736118992/multiple-media-viewer/?profileId=ACoAADbeL1YBy8Jp6uzno7NEy5viCsztI34aRmU&treasuryMediaId=1742336327874")[(2020/2021)], #link("https://www.linkedin.com/in/pedroclobo/overlay/education/736118992/multiple-media-viewer/?profileId=ACoAADbeL1YBy8Jp6uzno7NEy5viCsztI34aRmU&treasuryMediaId=1742336327873")[(2021/2022)]
