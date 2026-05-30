@@ -79,7 +79,8 @@
   url: "github.com/llvm/llvm-project",
 )
 - Regular contributor.
-- #link("https://github.com/llvm/llvm-project/pulls?q=author:pedroclobo")[Merged around 45 PRs].
+- #link("https://github.com/llvm/llvm-project/pulls?q=author:pedroclobo")[Merged around 50 PRs].
+- Currently upstreaming the #link("https://discourse.llvm.org/t/rfc-add-a-new-byte-type-to-llvm-ir/89522")[byte type], introduced in #link("https://web.ist.utl.pt/nuno.lopes/students/Pedro_Lobo_MSc.pdf")[my Master's thesis].
 - Granted #link("https://github.com/llvm/llvm-project/issues/129447")[commit access].
 
 == Projects
