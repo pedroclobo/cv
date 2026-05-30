@@ -54,7 +54,7 @@
 - Encoded the semantics of the new type in the #link("https://github.com/AliveToolkit/alive2")[Alive2] optimization verifier.
 - Successfully fixed type punning related miscompilations and implemented new optimizations.
 - Benchmarked the implementation, achieving nearly the same performance as upstream LLVM.
-- Present the implemented solution at the #link("https://www.youtube.com/watch?v=eQF-hDmlLog&pp=ygUOYnl0ZSB0eXBlIGxsdm0%3D")[LLVM Developer's Meeting 2025].
+- Presented the implemented solution at the #link("https://www.youtube.com/watch?v=eQF-hDmlLog&pp=ygUOYnl0ZSB0eXBlIGxsdm0%3D")[LLVM Developer's Meeting 2025].
 
 #work(
   title: "Invited Teaching Assistant",
