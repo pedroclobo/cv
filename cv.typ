@@ -29,6 +29,7 @@
 - Final Grade: 18/20
 - Thesis: #link("https://web.ist.utl.pt/nuno.lopes/students/Pedro_Lobo_MSc.pdf")[_Supporting Raw Data Copies in the LLVM Intermediate Representation_]
   - Thesis Defense Grade: 20/20
+- Academic Excellence Diploma (2024/2025)
 - Academic Merit Diploma #link("https://www.linkedin.com/in/pedroclobo/overlay/1755953423652/single-media-viewer/?profileId=ACoAADbeL1YBy8Jp6uzno7NEy5viCsztI34aRmU")[(2023/2024)]
 
 #edu(
